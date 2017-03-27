@@ -1,32 +1,32 @@
 const config = {
   nunjucks: {
-    src: 'src/pages/*.html',
+    src: 'src/partials/*.html',
     dest: 'dest',
     path: ['src'],
   },
   style: {
-    src: 'src/style/main.less',
+    src: 'src/assets/style/index.styl',
     dest: 'dest/css',
   },
   image: {
-    src: 'src/img/**/*.*',
+    src: 'src/assets/images/**/*.*',
     dest: 'dest/img',
   },
   javascript: {
-    src: ['src/js/vendors/*.js', 'src/js/**/*.js'],
+    src: ['src/vendor/js/*.js', 'src/assets/js/**/*.js'],
     dest: 'dest/js',
     file: 'bundle.js',
   },
   fonts: {
-    src: 'src/fonts/**/*.*',
+    src: 'src/assets/fonts/**/*.*',
     dest: 'dest/fonts',
   },
   watch: {
     html: 'src/**/*.html',
-    style: 'src/style/**/*.less',
-    img: 'src/img/**/*.*',
-    javascript: 'src/js/**/*.js',
-    fonts: 'src/fonts/**/*.*',
+    style: 'src/assets/style/**/*.styl',
+    img: 'src/assets/images/**/*.*',
+    javascript: 'src/assets/js/**/*.js',
+    fonts: 'src/assets/fonts/**/*.*',
   },
   clean: {
     path: './dest',
