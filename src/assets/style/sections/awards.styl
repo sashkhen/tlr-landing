@@ -1,29 +1,26 @@
 @import '../base/colors.styl'
 
-/* section-awards */
-
-.section-awards .section-wrapper {}
-.awards-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-.awards-item.awards-item-left {
-  flex-direction: row;
-}
-.awards-item.awards-item-right {
-  flex-direction: row-reverse;
-}
-.awards-item .item-image,
-.awards-item .item-text {
-  flex: 0 0 50%;
-  height: 100px;
-}
-.awards-item .item-image {
-  background-color: yellow;
-  opacity: .3;
-}
-.awards-item .item-text {
-  background-color: green;
-  opacity: .3;
-}
+.section-awards
+  .awards-item
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+  
+    &.awards-item-left
+      flex-direction: row
+    
+    &.awards-item-right
+      flex-direction: row-reverse
+  
+    .item-image
+    .item-text
+      flex: 0 0 50%
+      height: 100px
+      opacity: .5
+  
+    .item-image
+      background-color: $accent-light
+  
+    .item-text
+      background-color: $accent-dark
+  

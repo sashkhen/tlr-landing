@@ -1,21 +1,17 @@
 @import '../base/colors.styl'
 
-/* section-gallery */
+.section-gallery
+  .section-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
 
-.section-gallery .section-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  /*align-items: flex-start;*/
-}
-
-.gallery-item {
-  flex-grow: 0;
-  flex-shrink: 0;
-  height: 100px;
-  width: 200px;
-  padding: 20px;
-  opacity: .5;
-  background-color: green;
-  border: 1px solid rgba(0, 0, 0, .3);
-}
+  .gallery-item
+    flex-grow: 0
+    flex-shrink: 0
+    height: 100px
+    width: 200px
+    padding: 20px
+    opacity: .5
+    background-color: $accent-dark
+    border: 1px solid rgba($black, .5)
