@@ -1,35 +1,42 @@
 @import '../base/colors.styl'
+@import '../base/sizes.styl'
 
 .section-info
-  .section-wrapper 
+  .section-wrapper
     display: flex
     justify-content: flex-start
     align-items: stretch
 
 .section-info-left
-  .section-wrapper 
+  .section-wrapper
     flex-direction: row
 
 .section-info-right
-  .section-wrapper 
+  .section-wrapper
     flex-direction: row-reverse
 
 .section-info
-  .info-image 
+  .info-image
     flex: 0 0 70%
     height: 100px
     background-color: $accent-light
     opacity: .5
 
-  .info-text 
+  .info-text
     flex: 0 0 30%
     background-color: $accent-dark
     opacity: .5
 
+    .text-title
+      font-size: $textTitle
+
+    .text-description
+      font-size: $textSubtitle
+
 .section-info-left
-  .info-text 
+  .info-text
     transform: translateX(-50px)
 
 .section-info-right
-  .info-text 
+  .info-text
     transform: translateX(50px)
