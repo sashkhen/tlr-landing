@@ -1,7 +1,8 @@
 <section class="section section-title">
-  <div class="section-wrapper">
-    <div class="title-logo">TLR</div>
-    <div class="title-cta">play trailer</div>
-    <div class="title-slogan">Low-Res Horror. High Suspense.</div>
-  </div>
+  {% block content %}
+    {% include "partials/sections/title/background.html" %}
+    <div class="section-wrapper">
+      {% include "partials/sections/title/frontground.html" %}
+    </div>
+  {% endblock %}
 </section>

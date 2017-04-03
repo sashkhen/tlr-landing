@@ -10,10 +10,13 @@ const config = {
   },
   image: {
     src: 'src/assets/images/**/*.*',
-    dest: 'dest/img',
+    dest: 'dest/images',
   },
   javascript: {
-    src: ['src/vendor/js/*.js', 'src/assets/js/**/*.js'],
+    src: [
+      'src/vendor/js/*.js',
+      'src/assets/js/**/*.js'
+    ],
     dest: 'dest/js',
     file: 'bundle.js',
   },
