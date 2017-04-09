@@ -1,17 +1,87 @@
 @import '../base/colors.styl'
 
+// TODO: customize btn hovers
+
+$btnSize = 40px
+$arrowHeight = 10px
+$centeringTriangle = 37%
+$transitionSpeed = .3s
+$transitionTiming = ease-out
+
 .section-gallery
-  .section-wrapper
+  position: relative
+  margin: 50px 0
+
+  .gallery-controls
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 24px
+
+    .btn.btn-control
+      position: relative
+      width: $btnSize
+      height: $btnSize
+      border: 2px solid $butterscotch
+      border-radius: 50%
+      background-color: transparent
+      outline: none
+      cursor: pointer
+      transition: background-color $transitionSpeed $transitionTiming
+
+      &:hover
+        background-color: rgba($black, .5)
+
+      .btn-inner
+        display: block
+        margin: 0 auto
+        border-top: $arrowHeight solid transparent
+        border-bottom: $arrowHeight solid transparent
+
+      &:first-child
+        .btn-inner
+          transform: translateX(- $centeringTriangle) // TODO: magical num
+          border-right: ($arrowHeight * 1.5) solid transparent
+          border-right-color: $colorInitial
+          // transition: border-right-color $transitionSpeed $transitionTiming
+
+      &:last-child
+        .btn-inner
+          transform: translateX($centeringTriangle) // TODO: magical num
+          border-left: ($arrowHeight * 1.5) solid transparent
+          border-left-color: $colorInitial
+          // transition: border-left-color $transitionSpeed $transitionTiming
+
+
+  .gallery-items
+    position: relative
+    z-index: 0
     display: flex
     flex-direction: row
     justify-content: flex-start
+    // overflow: auto
+
+    .shadow
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      pointer-events: none
+      background-color: rgba($black, .7)
 
   .gallery-item
+    flex-basis: 40%
     flex-grow: 0
     flex-shrink: 0
-    height: 100px
-    width: 200px
-    padding: 20px
-    opacity: .5
-    background-color: $accent-dark
-    border: 1px solid rgba($black, .5)
+    padding: 10px
+
+    .img.img-gallery
+      display: block
+      width: 100%

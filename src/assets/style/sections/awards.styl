@@ -1,26 +1,54 @@
 @import '../base/colors.styl'
 
+$spaceVertical = 24px
+$spaceCenter = 24px
+$maxWidthText = 350px
+
 .section-awards
   .awards-item
     display: flex
     justify-content: flex-start
     align-items: stretch
-  
+    margin: 0 auto 70px
+
     &.awards-item-left
       flex-direction: row
-    
+
+      .item-image
+        text-align: right
+        padding-right: $spaceCenter
+
+      .item-text
+        padding-left: $spaceCenter
+        justify-content: flex-start
+
     &.awards-item-right
       flex-direction: row-reverse
-  
-    .item-image
-    .item-text
-      flex: 0 0 50%
-      height: 100px
-      opacity: .5
-  
-    .item-image
-      background-color: $accent-light
-  
-    .item-text
-      background-color: $accent-dark
-  
+
+      .item-image
+        text-align: left
+        padding-left: $spaceCenter
+
+      .item-text
+        padding-right: $spaceCenter
+        justify-content: flex-end
+
+  .item-image
+    flex: 0 0 50%
+
+    .img.img-award
+      width: 100%
+      max-width: $maxWidthText
+
+  .item-text
+    flex: 0 0 50%
+    display: flex
+    font-family: 'Lato', Helvetica, Arial, sans-serif
+    font-style: italic
+    font-size: 24px
+
+    .text-wrapper
+      max-width: $maxWidthText
+
+    .text-author
+      margin-top: 24px
