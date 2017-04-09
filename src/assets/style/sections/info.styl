@@ -1,42 +1,66 @@
 @import '../base/colors.styl'
 @import '../base/sizes.styl'
 
+$widthImage = 70%
+$widthText = 45%
+$widthGap = 33% // TODO: fix magical num
+$gradientStart = rgba($black, .7)
+$gradientEnd = rgba($black, 1)
+
 .section-info
+  margin: 100px 0
+
   .section-wrapper
     display: flex
     justify-content: flex-start
-    align-items: stretch
+    align-items: center
 
 .section-info-left
   .section-wrapper
     flex-direction: row
 
+  .img-shadow
+    background: linear-gradient(to left, $gradientEnd, $gradientStart)
+
 .section-info-right
   .section-wrapper
     flex-direction: row-reverse
+  .img-shadow
+    background: linear-gradient(to left, $gradientStart, $gradientEnd)
 
 .section-info
   .info-image
-    flex: 0 0 70%
-    height: 100px
-    background-color: $accent-light
-    opacity: .5
+    flex: 0 0 $widthImage
+    position: relative
 
   .info-text
-    flex: 0 0 30%
-    background-color: $accent-dark
-    opacity: .5
+    flex: 0 0 $widthText
 
     .text-title
+      margin: 0 0 24px
       font-size: $textTitle
+      font-weight: 600
 
     .text-description
+      // TODO: wrong font
+      font-family: 'Lato', Helvetica, Arial, sans-serif
       font-size: $textSubtitle
 
 .section-info-left
   .info-text
-    transform: translateX(-50px)
+    transform: translateX(- $widthGap)
 
 .section-info-right
   .info-text
-    transform: translateX(50px)
+    transform: translateX($widthGap)
+
+.img.img-info
+  display: block
+  width: 100%
+
+.img-shadow
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
