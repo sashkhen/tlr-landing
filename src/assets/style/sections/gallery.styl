@@ -1,12 +1,11 @@
 @import '../base/colors.styl'
+@import '../base/sizes.styl'
 
 // TODO: customize btn hovers
 
 $btnSize = 40px
 $arrowHeight = 10px
 $centeringTriangle = 37%
-$transitionSpeed = .3s
-$transitionTiming = ease-out
 
 .section-gallery
   position: relative
@@ -31,8 +30,6 @@ $transitionTiming = ease-out
       border: 2px solid $butterscotch
       border-radius: 50%
       background-color: transparent
-      outline: none
-      cursor: pointer
       transition: background-color $transitionSpeed $transitionTiming
 
       &:hover

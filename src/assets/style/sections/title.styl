@@ -1,12 +1,11 @@
 @import '../base/colors.styl'
+@import '../base/sizes.styl'
 
 // TODO: separate btn styles, handle touch devices
 
 $arrowHeight = 10px
 $colorInitial = $butterscotch
 $colorHover = $black
-$transitionSpeed = .3s
-$transitionTiming = ease-out
 
 .section-title
   position: relative
@@ -28,8 +27,6 @@ $transitionTiming = ease-out
     border-radius: 48px
     color: $colorInitial
     background-color: transparent
-    cursor: pointer
-    outline: none
     transition: background-color $transitionSpeed $transitionTiming
 
     &:hover
