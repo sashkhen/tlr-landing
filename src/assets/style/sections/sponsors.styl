@@ -1,7 +1,13 @@
 @import '../base/colors.styl'
 
 .section-sponsors
-  color: $white
+  .sponsors
+    display: flex
+    justify-content: center
 
-.sponsors-item
-  color: inherit
+  .sponsors-item
+    flex: 0 0 20%
+    padding: 16px
+
+    .img.img-sponsors
+      width: 100%
