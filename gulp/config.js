@@ -5,7 +5,10 @@ const config = {
     path: ['src'],
   },
   style: {
-    src: 'src/assets/style/index.styl',
+    src: [
+      'src/vendor/css/*.css',
+      'src/assets/style/index.styl'
+    ],
     dest: 'dest/css',
   },
   image: {
