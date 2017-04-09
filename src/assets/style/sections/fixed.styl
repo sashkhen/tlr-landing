@@ -1,7 +1,63 @@
 @import '../base/colors.styl'
 
+$transitionSpeed = .3s
+$transitionTiming = ease-out
+
 .section-fixed
   position: fixed
   z-index: 1
   bottom: 0
-  background-color: $fixed-color
+  border: 2px solid $accent-light
+  background-color: $accent-gray
+  font-size: 19px
+
+  .section-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    padding: 8px 20px
+
+    .fixed-title
+    .fixed-links
+    .fixed-socials
+      flex: 0 0 33%
+
+  .fixed-title
+    .title-text
+      margin: 0 0 4px
+      text-transform: uppercase
+
+    .title-cursive
+      font-style: italic
+      font-size: 14px
+
+  .fixed-links
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+    .links-title
+      text-transform: uppercase
+
+    .fixed-link
+      padding: 0 0 0 32px
+
+      .img.img-links
+        display: block
+        max-width: 116px
+        max-height: 32px
+
+  .fixed-socials
+    color: $butterscotch
+    text-align: right
+    font-size: 28px
+
+  .fixed-social
+    margin: 0 50px 0 0
+    vertical-align: sub
+    cursor: pointer
+    transition: color $transitionSpeed $transitionTiming
+
+    &:hover
+      color: $butterscotchHovered
