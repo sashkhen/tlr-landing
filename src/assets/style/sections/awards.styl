@@ -6,11 +6,16 @@ $spaceCenter = 24px
 $maxWidthText = 350px
 
 .section-awards
+  overflow-x: visible
+
   .awards-item
     display: flex
     justify-content: flex-start
     align-items: stretch
     margin: 0 auto 70px
+    +below($bp)
+      display: block
+
     &:last-child
       +below($bp)
         margin: 0 auto

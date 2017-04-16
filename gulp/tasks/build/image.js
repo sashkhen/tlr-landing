@@ -7,7 +7,7 @@ const webp = require('gulp-webp');
 gulp.task('build:image', function () {
   gulp.src(config.src)
       .pipe(imagemin())
-      .pipe(webp())
+      // .pipe(webp())
       .pipe(gulp.dest(config.dest))
       .pipe(reload({ stream: true }));
 });

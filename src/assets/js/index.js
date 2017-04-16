@@ -5,6 +5,11 @@ $(document).ready(function() {
     $('html').addClass('mobile');
   }
 
+  // video support detect [SAFARI]
+  if (Modernizr.video.webm === '') {
+    $('html').removeClass('video');
+  };
+
   // gallery options
   // http://fancyapps.com/fancybox/3/docs/#options
   $("[data-fancybox]").fancybox({
