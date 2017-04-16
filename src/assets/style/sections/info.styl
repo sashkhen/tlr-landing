@@ -61,14 +61,16 @@ $mobileOverlapping = -50px
   .info-text
     transform: translateX(- $widthGap)
     +below($bp)
-      transform: translateX(0)
+      transform: translateX(0)!important
+      opacity: 1!important
       margin-top: $mobileOverlapping
 
 .section-info-right
   .info-text
     transform: translateX($widthGap)
     +below($bp)
-      transform: translateX(0)
+      transform: translateX(0)!important
+      opacity: 1!important
       margin-top: $mobileOverlapping
 
 .img.img-info

@@ -5,9 +5,6 @@ $(document).ready(function() {
     $('html').addClass('mobile');
   }
 
-  // title background interactions
-  anm.on();
-
   // gallery options
   // http://fancyapps.com/fancybox/3/docs/#options
   $("[data-fancybox]").fancybox({
