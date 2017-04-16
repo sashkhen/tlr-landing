@@ -1,13 +1,19 @@
 $(document).ready(function() {
 
+  // mobile detect
+  if (window.mobilecheck()) {
+    $('html').addClass('mobile');
+  }
+
+  // title background interactions
+  anm.on();
+
+  // animations
   var SPEED    = 1,
       DURATION = 1000,
       DELAY    = 0.5,
       STEP     = 200,
       OFFSET   = 300;
-
-  // title background interactions
-  anm.on();
 
   var animateElement = function(controller, el) {
 
