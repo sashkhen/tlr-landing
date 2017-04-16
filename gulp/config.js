@@ -18,6 +18,12 @@ const config = {
     ],
     dest: 'dest/images',
   },
+  video: {
+    src: [
+      'src/assets/videos/**/*.*',
+    ],
+    dest: 'dest/videos',
+  },
   javascript: {
     src: [
       'src/vendor/js/*.js',

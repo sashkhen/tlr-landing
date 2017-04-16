@@ -13,6 +13,14 @@ html
   &.html--loading
     opacity: 0
 
+  &.html--html5-video
+    .img.img-info
+      display: none
+
+  &:not(.html--html5-video)
+    .video.video-info
+      display: none
+
 body
   overflow-x: hidden
   font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif
