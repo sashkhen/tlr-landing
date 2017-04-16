@@ -1,7 +1,7 @@
 {
-  "name": "copy-temp",
+  "name": "tlr-landing",
   "version": "1.0.0",
-  "description": "",
+  "description": "some awesome landing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "anm": "^2.0.3",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -27,10 +26,7 @@
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11",
     "jeet": "^7.1.0",
-    "jquery": "^3.2.1",
-    "jqueryui": "^1.11.1",
     "rupture": "^0.6.2",
-    "scrollmagic": "^2.0.5",
     "stylus": "^0.54.5"
   }
 }
