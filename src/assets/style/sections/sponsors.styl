@@ -7,10 +7,14 @@
   .sponsors
     display: flex
     justify-content: center
+    +below($bp)
+      flex-wrap: wrap
 
   .sponsors-item
     flex: 0 0 20%
     padding: 16px
+    +below($bp)
+      flex: 1 1 50%
 
     .img.img-sponsors
       display: block

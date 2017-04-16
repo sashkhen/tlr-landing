@@ -12,21 +12,28 @@ $padding = 32px
     font-size: 48px
     font-weight: 600
     margin: 0 0 16px
+    padding: 0 $padding 0 0
 
   .team-subtitle
     font-family: 'WorkSans', Helvetica, Arial, sans-serif
     font-size: 24px
     margin: 0 0 32px
+    padding: 0 $padding 0 0
 
   .team-gallery
     display: flex
     flex-direction: row
     justify-content: center
     align-items: stretch
+    +below($bp)
+      flex-wrap: wrap
 
   .team-item
     flex: 0 0 25%
     padding-right: $padding
+    +below($bp)
+      flex: 0 0 50%
+      padding-bottom: $padding
 
     .item-image
       position: relative

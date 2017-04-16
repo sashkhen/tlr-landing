@@ -40,15 +40,18 @@ $delayReverse = 1s
 
   .head--bg-g-on
     background-image: url('../../images/title-background/girlyanda-on.png')
-    animation: opacity .5s ease-out $delayCommon infinite alternate
+    +above($bp)
+      animation: opacity .5s ease-out $delayCommon infinite alternate
 
   .head--bg-alert
     background-image: url('../../images/title-background/trevoga.png')
-    animation: opacity .5s ease-out $delayCommon infinite alternate
+    +above($bp)
+      animation: opacity .5s ease-out $delayCommon infinite alternate
 
   .head--bg-dark
     background-color: rgba(0,0,0, .5)
-    animation: opacity .5s ease-out $delayReverse infinite alternate
+    +above($bp)
+      animation: opacity .5s ease-out $delayReverse infinite alternate
 
 @-webkit-keyframes opacity
   0%   {opacity:1;}

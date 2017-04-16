@@ -6,6 +6,7 @@ $widthText = 45%
 $widthGap = 33% // TODO: fix magical num
 $gradientStart = rgba($black, 0)
 $gradientEnd = rgba($black, 1)
+$mobileOverlapping = -50px
 
 .section-info
   margin: 100px 0
@@ -19,6 +20,8 @@ $gradientEnd = rgba($black, 1)
 .section-info-left
   .section-wrapper
     flex-direction: row
+    +below($bp)
+      flex-direction: column
 
   .img-shadow
     background: linear-gradient(to left, $gradientEnd, $gradientStart)
@@ -26,6 +29,9 @@ $gradientEnd = rgba($black, 1)
 .section-info-right
   .section-wrapper
     flex-direction: row-reverse
+    +below($bp)
+      flex-direction: column
+
   .img-shadow
     background: linear-gradient(to left, $gradientStart, $gradientEnd)
 
@@ -33,9 +39,13 @@ $gradientEnd = rgba($black, 1)
   .info-image
     flex: 0 0 $widthImage
     position: relative
+    +below($bp)
+      flex: 1 1 1
 
   .info-text
     flex: 0 0 $widthText
+    +below($bp)
+      flex: 1 1 1
 
     .text-title
       margin: 0 0 24px
@@ -50,12 +60,19 @@ $gradientEnd = rgba($black, 1)
 .section-info-left
   .info-text
     transform: translateX(- $widthGap)
+    +below($bp)
+      transform: translateX(0)
+      margin-top: $mobileOverlapping
 
 .section-info-right
   .info-text
     transform: translateX($widthGap)
+    +below($bp)
+      transform: translateX(0)
+      margin-top: $mobileOverlapping
 
 .img.img-info
+.video.video-info
   display: block
   width: 100%
 

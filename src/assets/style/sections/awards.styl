@@ -14,25 +14,40 @@ $maxWidthText = 350px
 
     &.awards-item-left
       flex-direction: row
+      +below($bp)
+        flex-direction: column
 
       .item-image
         text-align: right
         padding-right: $spaceCenter
+        +below($bp)
+          text-align: center
+          padding-right: 0
 
       .item-text
         padding-left: $spaceCenter
         justify-content: flex-start
+        +below($bp)
+          padding: $spaceVertical 0 0 0
 
     &.awards-item-right
       flex-direction: row-reverse
+      +below($bp)
+        flex-direction: column
 
       .item-image
         text-align: left
         padding-left: $spaceCenter
+        +below($bp)
+          text-align: center
+          padding-left: 0
 
       .item-text
         padding-right: $spaceCenter
         justify-content: flex-end
+        +below($bp)
+          padding: $spaceVertical 0 0 0
+          justify-content: flex-start
 
   .item-image
     flex: 0 0 50%
@@ -50,6 +65,8 @@ $maxWidthText = 350px
 
     .text-wrapper
       max-width: $maxWidthText
+      +below($bp)
+        max-width: 100%
 
     .text-author
       margin-top: 24px
