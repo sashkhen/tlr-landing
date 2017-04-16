@@ -11,7 +11,7 @@ $centeringTriangle = 37%
   position: relative
   margin: 50px 0
 
-  .gallery-controls
+/*  .gallery-controls
     position: absolute
     z-index: 1
     top: 0
@@ -40,6 +40,7 @@ $centeringTriangle = 37%
         margin: 0 auto
         border-top: $arrowHeight solid transparent
         border-bottom: $arrowHeight solid transparent
+        pointer-events: none
 
       &:first-child
         .btn-inner
@@ -62,7 +63,7 @@ $centeringTriangle = 37%
     display: flex
     flex-direction: row
     justify-content: flex-start
-    // overflow: auto
+    // overflow: visible
 
     .shadow
       position: absolute
@@ -81,4 +82,13 @@ $centeringTriangle = 37%
 
     .img.img-gallery
       display: block
-      width: 100%
+      width: 100%*/
+
+/*.gallery-item*/
+  /*overflow: hidden*/
+  /*position: relative*/
+
+.img.img-gallery
+  display: block
+  height: 360px
+  padding: 0 18px

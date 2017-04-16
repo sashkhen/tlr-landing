@@ -12,7 +12,10 @@ const config = {
     dest: 'dest/css',
   },
   image: {
-    src: 'src/assets/images/**/*.*',
+    src: [
+      'src/vendor/images/*.*',
+      'src/assets/images/**/*.*',
+    ],
     dest: 'dest/images',
   },
   javascript: {
@@ -24,7 +27,10 @@ const config = {
     file: 'bundle.js',
   },
   fonts: {
-    src: 'src/assets/fonts/**/*.*',
+    src: [
+      'src/vendor/fonts/**/*.*',
+      'src/assets/fonts/**/*.*',
+    ],
     dest: 'dest/fonts',
   },
   watch: {
