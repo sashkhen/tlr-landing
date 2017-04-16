@@ -33,16 +33,6 @@ $colorHover = $black
     border-radius: 48px
     color: $colorInitial
     background-color: transparent
-    transition: background-color $transitionSpeed $transitionTiming
-
-    &:hover
-      background-color: $colorInitial
-
-      .btn-text
-        color: $colorHover
-
-        &::before
-          border-left-color: $colorHover;
 
     .btn-text
       text-transform: uppercase
@@ -64,3 +54,29 @@ $colorHover = $black
 
   .title-slogan
     font-size: 31px
+
+// hovers [mobile disabling]
+html.mobile
+  .section-title
+    .btn.btn-title
+      &:active
+        background-color: $colorInitial
+
+        .btn-text
+        color: $colorHover
+
+        &::before
+          border-left-color: $colorHover
+
+html:not(.mobile)
+  .section-title
+    .btn.btn-title
+      transition: background-color $transitionSpeed $transitionTiming
+      &:hover
+        background-color: $colorInitial
+
+        .btn-text
+          color: $colorHover
+
+          &::before
+            border-left-color: $colorHover

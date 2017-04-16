@@ -67,7 +67,17 @@ $padding = 32px
       color: $butterscotch
       font-family: 'WorkSans', Helvetica, Arial, sans-serif
       font-size: 19px
-      transition: color $transitionSpeed $transitionTiming
 
+// hovers [mobile disabling]
+html.mobile
+  .section-team
+    .team-item .text-link
+      &:active
+        color: $butterscotchHovered
+
+html:not(.mobile)
+  .section-team
+    .team-item .text-link
+      transition: color $transitionSpeed $transitionTiming
       &:hover
         color: $butterscotchHovered

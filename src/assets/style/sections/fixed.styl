@@ -70,9 +70,19 @@
   .fixed-social
     margin: 0 50px 0 0
     vertical-align: sub
-    transition: color $transitionSpeed $transitionTiming
     +below($bp)
       margin: 0
 
-    &:hover
-      color: $butterscotchHovered
+// hovers [mobile disabling]
+html.mobile
+  .section-fixed
+    .fixed-social
+      &:active
+        color: $butterscotchHovered
+
+html:not(.mobile)
+  .section-fixed
+    .fixed-social
+      transition: color $transitionSpeed $transitionTiming
+      &:hover
+        color: $butterscotchHovered
