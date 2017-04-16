@@ -10,9 +10,15 @@ $colorHover = $black
 .section-title
   position: relative
   text-align: center
+  overflow-x: visible
 
   .section-wrapper
     position: relative
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    padding: 200px 20px
 
   .title-logo
     margin: 0 auto 70px
