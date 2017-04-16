@@ -11,6 +11,9 @@ $maxWidthText = 350px
     justify-content: flex-start
     align-items: stretch
     margin: 0 auto 70px
+    &:last-child
+      +below($bp)
+        margin: 0 auto
 
     &.awards-item-left
       flex-direction: row
@@ -61,7 +64,9 @@ $maxWidthText = 350px
     display: flex
     font-family: 'Lato', Helvetica, Arial, sans-serif
     font-style: italic
-    font-size: 24px
+    font-size: $textRegular
+    +below($bp)
+      font-size: $textRegularMob
 
     .text-wrapper
       max-width: $maxWidthText

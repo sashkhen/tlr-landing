@@ -5,6 +5,8 @@ $padding = 32px
 
 .section-cta
   margin: 100px 0
+  +below($bp)
+    margin: 0 0 20px
 
   .section-wrapper
     text-align: center
@@ -15,6 +17,8 @@ $padding = 32px
     border-radius: 8px
     border: 4px solid $butterscotch
     color: $butterscotch
+    +below($bp)
+      padding: ($padding / 2) $padding
 
     .action
       margin: ($padding / 2)

@@ -7,18 +7,28 @@ $padding = 32px
 
 .section-team
   padding: 0 0 0 $padding
+  +below($bp)
+    padding: 0
+
+  .section-wrapper
+    +below($bp)
+      padding-bottom: 0
 
   .team-title
-    font-size: 48px
+    font-size: $textTitle
     font-weight: 600
     margin: 0 0 16px
     padding: 0 $padding 0 0
+    +below($bp)
+      font-size: $textTitleMob
 
   .team-subtitle
     font-family: 'WorkSans', Helvetica, Arial, sans-serif
-    font-size: 24px
+    font-size: $textSubtitle
     margin: 0 0 32px
     padding: 0 $padding 0 0
+    +below($bp)
+      font-size: $textSubtitleMob
 
   .team-gallery
     display: flex
@@ -56,17 +66,23 @@ $padding = 32px
       margin: 0 0 8px
       font-size: 30px
       font-weight: 600
+      +below($bp)
+        font-size: $textSubtitleMob
 
     .text-role
       margin: 0 0 16px
       font-family: 'WorkSans', Helvetica, Arial, sans-serif
       font-size: 16px
+      +below($bp)
+        font-size: $textDefaultMob
 
     .text-link
       cursor: pointer
       color: $butterscotch
       font-family: 'WorkSans', Helvetica, Arial, sans-serif
       font-size: 19px
+      +below($bp)
+        font-size: $textDefaultMob
 
 // hovers [mobile disabling]
 html.mobile
