@@ -46,6 +46,10 @@ const config = {
     javascript: 'src/assets/js/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
   },
+  compress: {
+    src: 'dest/**/*.*',
+    dest: 'compressed',
+  },
   clean: {
     path: './dest',
   },
