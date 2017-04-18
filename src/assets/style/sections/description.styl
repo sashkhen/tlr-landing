@@ -1,0 +1,21 @@
+@import '../base/colors.styl'
+@import '../base/sizes.styl'
+
+.section-description
+  margin: 100px 0
+  overflow-x: visible
+  +below($bp)
+    margin: 20px 0
+
+  .text-title
+    margin: 0 0 24px
+    font-size: $textTitle
+    font-weight: 600
+    +below($bp)
+      font-size: $textTitleMob
+
+  .text-description
+    font-family: 'WorkSans', Helvetica, Arial, sans-serif
+    font-size: $textSubtitle
+    +below($bp)
+      font-size: $textSubtitleMob

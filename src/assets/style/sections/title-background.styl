@@ -32,21 +32,20 @@ $delayReverse = 1s
     transform: translateZ(0)
 
   .head--bg-back
-    background-image: url('../images/title-background/back.png')
-
-  .head--bg-front
-    background-image: url('../images/title-background/front.png')
-
-  .head--bg-g-off
-    background-image: url('../images/title-background/girlyanda-off.png')
+    background-image: url('../images/title-background/background.png')
 
   .head--bg-g-on
-    background-image: url('../images/title-background/girlyanda-on.png')
+    &.lights_2
+      background-image: url('../images/title-background/lights_2.png')
+    &.lights_3
+      background-image: url('../images/title-background/lights_3.png')
+    &.lights_4
+      background-image: url('../images/title-background/lights_4.png')
     +above($bp)
       animation: opacity .5s ease-out $delayCommon infinite alternate
 
   .head--bg-alert
-    background-image: url('../images/title-background/trevoga.png')
+    background-image: url('../images/title-background/lights_1.png')
     +above($bp)
       animation: opacity .5s ease-out $delayCommon infinite alternate
 

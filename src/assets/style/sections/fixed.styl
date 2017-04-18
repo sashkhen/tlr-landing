@@ -34,6 +34,16 @@
       font-style: italic
       font-size: 14px
 
+    &.centered
+      display: flex
+      align-items: center
+      +below($bp)
+        display: none
+
+      .title-text
+        font-size: 16px
+        text-transform: none
+
   .fixed-links
     display: flex
     justify-content: center
@@ -73,12 +83,31 @@
     +below($bp)
       margin: 0
 
+  .btn.btn-fixed
+    padding: 8px 40px
+    border: 2px solid $butterscotchHovered
+    border-radius: 6px
+    color: $white
+    background-color: $butterscotch
+
+    .btn-text
+      font-size: 16px
+      font-weight: 500
+      line-height: 1
+      transition: color $transitionSpeed $transitionTiming
+
 // hovers [mobile disabling]
 html.mobile
   .section-fixed
     .fixed-social
       &:active
         color: $butterscotchHovered
+    .btn.btn-fixed
+      &:active
+        background-color: $butterscotchHovered
+
+        .btn-text
+          color: $white
 
 html:not(.mobile)
   .section-fixed
@@ -86,3 +115,11 @@ html:not(.mobile)
       transition: color $transitionSpeed $transitionTiming
       &:hover
         color: $butterscotchHovered
+
+    .btn.btn-fixed
+      transition: background-color $transitionSpeed $transitionTiming
+      &:hover
+        background-color: $butterscotchHovered
+
+        .btn-text
+          color: $white
