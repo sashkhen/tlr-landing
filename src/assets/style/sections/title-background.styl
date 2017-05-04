@@ -38,13 +38,15 @@ $delayReverse = 2s
     &.lights_2
       background-image: url('../images/title-background/lights_2.png')
       +above($bp)
-        animation: opacity 1.5s ease-out 1s infinite alternate
+        animation: opacity-garland 1.0s linear 0.0s infinite alternate
     &.lights_3
       background-image: url('../images/title-background/lights_3.png')
       +above($bp)
-        animation: opacity 1.5s ease-out 2s infinite alternate
+        animation: opacity-garland 1.0s linear 0.5s infinite alternate
     &.lights_4
       background-image: url('../images/title-background/lights_4.png')
+      +above($bp)
+        animation: opacity-garland 1.0s linear 1.0s infinite alternate
 
     +above($bp)
       -webkit-perspective: 1000
@@ -52,7 +54,7 @@ $delayReverse = 2s
       -webkit-transform:translate3d(0,0,0)
       transform:translate3d(0,0,0)
       -webkit-transform-style: preserve-3d
-      animation: opacity 1.5s ease-out $delayCommon infinite alternate
+      // animation: opacity 0.6s ease-out $delayCommon infinite alternate
 
   .head--bg-alert
     background-image: url('../images/title-background/lights_1.png')
@@ -62,7 +64,7 @@ $delayReverse = 2s
       -webkit-transform:translate3d(0,0,0)
       transform:translate3d(0,0,0)
       -webkit-transform-style: preserve-3d
-      animation: opacity 1.5s ease-out $delayCommon infinite alternate
+      animation: opacity-alarm 0.3s linear 1.0s infinite alternate
 
 
   .head--bg-dark
@@ -73,12 +75,20 @@ $delayReverse = 2s
       -webkit-transform:translate3d(0,0,0)
       transform:translate3d(0,0,0)
       -webkit-transform-style: preserve-3d
-      animation: opacity 1.5s ease-out $delayReverse infinite alternate
+      // animation: opacity 1.5s ease-out $delayReverse infinite alternate
 
-@-webkit-keyframes opacity
+@-webkit-keyframes opacity-alarm
   0%   {opacity:1}
   100% {opacity:0}
 
-@keyframes opacity
+@keyframes opacity-alarm
   0%   {opacity:1}
   100% {opacity:0}
+
+@-webkit-keyframes opacity-garland
+  0%   {opacity:0}
+  100% {opacity:1}
+
+@keyframes opacity-garland
+  0%   {opacity:0}
+  100% {opacity:1}

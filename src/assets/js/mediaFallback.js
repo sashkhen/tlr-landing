@@ -12,7 +12,7 @@ $(document).ready(function() {
     if (videoToLoad) {
       this.src = src;
     } else {
-      var ext = !mobile ? '.gif' : '.jpg';
+      var ext = !mobile ? '.gif' : '.png';
       var imgSrc = src + ext;
       this.src = imgSrc;
     }
