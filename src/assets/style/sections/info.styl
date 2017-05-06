@@ -19,23 +19,25 @@ $mobileOverlapping = -50px
     justify-content: flex-start
     align-items: center
 
-.section-info-left
-  .section-wrapper
-    flex-direction: row
-    +below($bp)
-      flex-direction: column
+  // .section-info-left
+  &:nth-child(odd)
+    .section-wrapper
+      flex-direction: row
+      +below($bp)
+        flex-direction: column
 
-  .img-shadow
-    background: linear-gradient(to left, $gradientEnd, $gradientStart)
+    .img-shadow
+      background: linear-gradient(to left, $gradientEnd, $gradientStart)
 
-.section-info-right
-  .section-wrapper
-    flex-direction: row-reverse
-    +below($bp)
-      flex-direction: column
+  // .section-info-right
+  &:nth-child(even)
+    .section-wrapper
+      flex-direction: row-reverse
+      +below($bp)
+        flex-direction: column
 
-  .img-shadow
-    background: linear-gradient(to left, $gradientStart, $gradientEnd)
+    .img-shadow
+      background: linear-gradient(to left, $gradientStart, $gradientEnd)
 
 .section-info
   .info-image
@@ -62,21 +64,23 @@ $mobileOverlapping = -50px
       +below($bp)
         font-size: $textSubtitleMob
 
-.section-info-left
-  .info-text
-    transform: translateX(- $widthGap)
-    +below($bp)
-      transform: translateX(0)!important
-      opacity: 1!important
-      margin-top: $mobileOverlapping
+  // .section-info-left
+  &:nth-child(odd)
+    .info-text
+      transform: translateX(- $widthGap)
+      +below($bp)
+        transform: translateX(0)!important
+        opacity: 1!important
+        margin-top: $mobileOverlapping
 
-.section-info-right
-  .info-text
-    transform: translateX($widthGap)
-    +below($bp)
-      transform: translateX(0)!important
-      opacity: 1!important
-      margin-top: $mobileOverlapping
+  // .section-info-right
+  &:nth-child(even)
+    .info-text
+      transform: translateX($widthGap)
+      +below($bp)
+        transform: translateX(0)!important
+        opacity: 1!important
+        margin-top: $mobileOverlapping
 
 .img.img-info
 .video.video-info
