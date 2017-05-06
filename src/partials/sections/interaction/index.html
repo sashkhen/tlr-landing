@@ -1,20 +1,36 @@
+{% set interaction = {
+  image: '/images/interaction/city_normal.png',
+  sponsors: [
+    {
+      logo: '/images/logos/painted_black_games_splash.png',
+      title: 'Painted_Black_Games'
+    },
+    {
+      logo: '/images/logos/merge-games-logo.png',
+      title: 'Merge_Games'
+    }
+  ],
+  copyrights: 'Copyrights'
+} %}
+
 <section class="section section-interaction">
   <div class="image-wrapper">
     <div class="shadow"></div>
-    <img src="images/interaction/city_normal.png">
+    <img src={{interaction.image}}>
   </div>
 
   <div class="content-wrapper">
     <div class="sponsors">
-      <div class="sponsors-item">
-        <img class="img img-sponsors" src="images/logos/painted_black_games_splash.png" />
-      </div>
-      <div class="sponsors-item">
-        <img class="img img-sponsors" src="images/logos/merge-games-logo.png" />
-      </div>
+
+      {% for item in interaction.sponsors %}
+        <div class="sponsors-item">
+          <img class="img img-sponsors" src={{item.logo}} alt={{item.title}} />
+        </div>
+      {% endfor %}
+
     </div>
     <div class="copyrights">
-      <p class="copy-text">Copyrights</p>
+      <p class="copy-text">{{interaction.copyrights}}</p>
     </div>
   </div>
 </section>

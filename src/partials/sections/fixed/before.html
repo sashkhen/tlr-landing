@@ -9,15 +9,9 @@
       </button>
     </div>
     <div class="fixed-socials">
-      <a class="fixed-social" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=781956216">
-        <i class="fa fa-steam" aria-hidden="true"></i>
-      </a>
-      <a class="fixed-social" target="_blank" href="https://www.facebook.com/TheLongReach/">
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-      </a>
-      <a class="fixed-social" target="_blank" href="https://twitter.com/TheLongReach">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-      </a>
+      {% for item in share %}
+        {% include "partials/sections/fixed/template_socials.html" %}
+      {% endfor %}
       <a class="fixed-social" target="_blank" href="https://twitter.com/TheLongReach">
         <span class="social-text">press kit</span>
       </a>
