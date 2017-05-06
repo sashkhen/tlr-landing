@@ -4,10 +4,27 @@
 .section-interaction
   max-height: 600px
   overflow: hidden
+  position: relative
+
+  .image-wrapper
+    width: 100%
+    overflow: hidden
+    position: relative
+    display: flex
+    justify-content: center
+
+  .content-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
   .img.img-interaction
-    display: block
-    width: 100%
+    width: auto
 
   .shadow
     position: absolute
@@ -17,5 +34,27 @@
     right: 0
     background-color: rgba($black, .7)
 
-  .section-wrapper.copyrights
+  .sponsors
+    display: flex
+    justify-content: center
+    padding: 50px 0 0
+    +below($bp)
+      flex-wrap: wrap
+      padding: 20px 0 0
+
+  .sponsors-item
+    flex: 0 0 20%
+    padding: 16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    alin-items: center
+    +below($bp)
+      flex: 1 1 50%
+
+    .img.img-sponsors
+      display: block
+      width: 100%
+
+  .copyrights
     padding: 10px 20px

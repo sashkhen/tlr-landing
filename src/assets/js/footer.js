@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var addSpace = function() {
     var fixed = $('.section-fixed').outerHeight();
-    $('body').css({ marginBottom: fixed });
+    $('.section-interaction').css({ marginBottom: fixed });
   };
 
   addSpace();
