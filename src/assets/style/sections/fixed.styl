@@ -20,7 +20,7 @@
     .fixed-socials
       flex: 0 0 33%
       +below($bp)
-        flex: 0 0 50%
+        flex: 0 1 50%
 
   .fixed-title
     +below($bp)
@@ -72,16 +72,26 @@
     color: $butterscotch
     text-align: right
     font-size: 28px
+    display: flex
+    justify-content: space-around
+    align-items: center
     +below($bp)
-      display: flex
-      justify-content: space-around
-      align-items: center
+      justify-content: space-between
 
   .fixed-social
-    margin: 0 50px 0 0
-    vertical-align: sub
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
     +below($bp)
       margin: 0
+      padding: 8px
+
+  .social-text
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    font-size: 14px
 
   .btn.btn-fixed
     padding: 8px 40px
@@ -89,12 +99,18 @@
     border-radius: 6px
     color: $white
     background-color: $butterscotch
+    +below($bp)
+      padding: 8px 16px
 
     .btn-text
       font-size: 16px
       font-weight: 500
       line-height: 1
       transition: color $transitionSpeed $transitionTiming
+
+    .m-hidden
+      +below($bp)
+        display: none
 
 // hovers [mobile disabling]
 html.mobile
