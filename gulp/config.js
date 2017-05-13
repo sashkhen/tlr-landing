@@ -39,12 +39,19 @@ const config = {
     ],
     dest: 'dest/fonts',
   },
+  favicons: {
+    src: [
+      'src/assets/favicons/**/*.*',
+    ],
+    dest: 'dest/favicons',
+  },
   watch: {
     html: 'src/**/*.html',
     style: 'src/assets/style/**/*.styl',
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/js/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
+    favicons: 'src/assets/favicons/**/*.*',
   },
   compress: {
     src: 'dest/**/*.*',

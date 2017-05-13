@@ -7,4 +7,5 @@ gulp.task('build', [
     'build:video',
     'build:javascript',
     'build:fonts',
+    'build:favicons',
 ]);
