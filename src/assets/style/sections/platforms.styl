@@ -1,0 +1,49 @@
+@import '../base/colors.styl'
+@import '../base/sizes.styl'
+
+$padding = 32px
+
+.section-platforms
+  .platforms-title
+    font-size: $textTitle
+    font-weight: 600
+    margin: 0 0 ($padding * 2)
+    padding: 0 $padding 0 0
+    +below($bp)
+      font-size: $textTitleMob
+
+  .platforms-gallery
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: center
+    align-items: stretch
+
+  .platforms-item
+    flex: 0 0 33% // this one is for 3 items in a row, u can increase/decrease those
+    padding: 0 $padding $padding
+    text-align: center
+    +below($bp)
+      flex: 0 0 50% // this one is the same but for mobile
+      width: 50%
+
+  .item-image
+    margin: 0 0 $padding
+    .img.img-platforms
+      width: 100%
+      max-width: 250px // this one is for max icon size, u can make it less
+
+  .text-title
+    margin: 0 0 8px
+    font-size: 30px
+    font-weight: 600
+    +below($bp)
+      font-size: $textDefaultMob
+
+  // u can use this one to make font smaller
+  .text-subtitle
+    margin: 0 0 16px
+    font-family: 'WorkSans', Helvetica, Arial, sans-serif
+    font-size: 16px
+    +below($bp)
+      font-size: $textDefaultMob

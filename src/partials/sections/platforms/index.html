@@ -1,0 +1,42 @@
+{% set platforms = {
+  title: 'Coming Later This Year, on:',
+  list: [
+    {
+      icon: '/images/platforms/apple-icon.png',
+      title: 'Apple'
+    },
+    {
+      icon: '/images/platforms/linux-icon.png',
+      title: 'Linux'
+    },
+    {
+      icon: '/images/platforms/nintendo-switch-logo.png',
+      title: 'Nintendo'
+    },
+    {
+      icon: '/images/platforms/pc-icon.png',
+      title: 'PC'
+    },
+    {
+      icon: '/images/platforms/playstation4-icon.png',
+      title: 'Playstation4'
+    },
+    {
+      icon: '/images/platforms/xbox-icon.png',
+      title: 'Xbox'
+    }
+  ]
+} %}
+
+<section class="section section-platforms">
+  <div class="section-wrapper">
+    <h3 class="platforms-title">{{platforms.title}}</h3>
+    <div class="platforms-gallery">
+      {% block content %}
+        {% for item in platforms.list %}
+          {% include "partials/sections/platforms/template.html" %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+</section>
