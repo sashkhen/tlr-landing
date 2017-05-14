@@ -3,14 +3,16 @@
   sponsors: [
     {
       logo: '/images/logos/painted_black_games_splash.png',
-      title: 'Painted_Black_Games'
+      title: 'Painted_Black_Games',
+      href: 'http://paintedblack.games'
     },
     {
       logo: '/images/logos/merge-games-logo.png',
-      title: 'Merge_Games'
+      title: 'Merge_Games',
+      href: 'http://mergegames.com'
     }
   ],
-  copyrights: 'Copyrights'
+  copyrights: 'TheLongReach™ developed by PaintedBlack™ Games in association with MergeGamesⒸ'
 } %}
 
 <section class="section section-interaction">
@@ -20,16 +22,16 @@
   </div>
 
   <div class="content-wrapper">
-    <div class="sponsors">
-
-      {% for item in interaction.sponsors %}
-        <div class="sponsors-item">
-          <img class="img img-sponsors" src={{item.logo}} alt={{item.title}} />
-        </div>
-      {% endfor %}
-
-    </div>
     <div class="copyrights">
+      <div class="sponsors">
+        {% for item in interaction.sponsors %}
+          <div class="sponsors-item">
+            <a href={{item.href}}>
+              <img class="img img-sponsors" src={{item.logo}} alt={{item.title}} />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
       <p class="copy-text">{{interaction.copyrights}}</p>
     </div>
   </div>

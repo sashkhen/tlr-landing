@@ -8,4 +8,5 @@ gulp.task('build', [
     'build:javascript',
     'build:fonts',
     'build:favicons',
+    'build:presskit'
 ]);
