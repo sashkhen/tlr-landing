@@ -1,34 +1,58 @@
-<!-- works not properly with repeated images -->
-<!-- will work fine with unique ones -->
+{% set items = [
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_1.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_1.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_2.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_2.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_3.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_3.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_4.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_4.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_5.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_5.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_6.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_6.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_7.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_7.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_8.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_8.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_9.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_9.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  },
+  {
+    thumb: '/images/gallery/processed/The_Long_Reach_Adventure_Game_10.png',
+    image: 'images/gallery/processed/The_Long_Reach_Adventure_Game_10.png',
+    alt: 'The_Long_Reach_Adventure_Game_Pixel_Art'
+  }
+] %}
+
 <div class="gallery">
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-1.jpg">
-      <img class="img img-gallery" src="images/info/thumb-1.jpg">
-    </a>
-  </div>
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-2.jpg">
-      <img class="img img-gallery" src="images/info/thumb-2.jpg">
-    </a>
-  </div>
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-1.jpg">
-      <img class="img img-gallery" src="images/info/thumb-1.jpg">
-    </a>
-  </div>
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-2.jpg">
-      <img class="img img-gallery" src="images/info/thumb-2.jpg">
-    </a>
-  </div>
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-1.jpg">
-      <img class="img img-gallery" src="images/info/thumb-1.jpg">
-    </a>
-  </div>
-  <div class="gallery-item">
-    <a data-fancybox="gallery" href="images/info/image-2.jpg">
-      <img class="img img-gallery" src="images/info/thumb-2.jpg">
-    </a>
-  </div>
+  {% for item in items %}
+    {% include "partials/sections/gallery/template.html" %}
+  {% endfor %}
 </div>

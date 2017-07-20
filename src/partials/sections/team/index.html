@@ -1,13 +1,47 @@
+{% set team = {
+  title: 'Our Team',
+  subtitle: 'I am alone, and feel the charm of existence',
+  list: [
+    {
+      image: '/images/team/tlr_art.png',
+      name: 'Alina Berdnik',
+      role: 'Artist, Animator',
+      username: '@username',
+      link: 'https://twitter.com/egnech'
+    },
+    {
+      image: '/images/team/tlr_narrative.png',
+      name: 'Evgeni Puzankov',
+      role: 'Narrative Designer, Writer',
+      username: '@username',
+      link: 'https://twitter.com/egnech'
+    },
+    {
+      image: '/images/team/tlr_developer.png',
+      name: 'Roman Tomilin',
+      role: 'Developer',
+      username: '@username',
+      link: 'https://twitter.com/egnech'
+    },
+    {
+      image: '/images/team/tlr_composer.png',
+      name: 'Ruslan Viter',
+      role: 'Composer, Sound Designer',
+      username: '@username',
+      link: 'https://twitter.com/egnech'
+    }
+  ]
+} %}
+
 <section class="section section-team">
   <div class="section-wrapper">
-    <h3 class="team-title">Our Team</h3>
-    <p class="team-subtitle">I am alone, and feel the charm of existence</p>
+    <h3 class="team-title">{{team.title}}</h3>
+    <!-- <p class="team-subtitle">{{team.subtitle}}</p> -->
     <div class="team-gallery">
       {% block content %}
-        {% include "partials/sections/team/first.html" %}
-        {% include "partials/sections/team/second.html" %}
-        {% include "partials/sections/team/third.html" %}
-        {% include "partials/sections/team/fourth.html" %}
+        {% for item in team.list %}
+          {% include "partials/sections/team/template.html" %}
+        {% endfor %}
       {% endblock %}
     </div>
   </div>

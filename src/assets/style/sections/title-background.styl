@@ -2,7 +2,7 @@
 @import '../base/sizes.styl'
 
 $delayCommon = .5s
-$delayReverse = 1s
+$delayReverse = 2s
 
 .section-title
   .head
@@ -21,8 +21,8 @@ $delayReverse = 1s
     position: absolute
     top: 0
     bottom: 0
-    left: -10%
-    right: -10%
+    left: 0
+    right: 0
     background-repeat: no-repeat
     background-position: center
     background-size: cover
@@ -32,33 +32,63 @@ $delayReverse = 1s
     transform: translateZ(0)
 
   .head--bg-back
-    background-image: url('../images/title-background/back.png')
-
-  .head--bg-front
-    background-image: url('../images/title-background/front.png')
-
-  .head--bg-g-off
-    background-image: url('../images/title-background/girlyanda-off.png')
+    background-image: url('../images/title-background/background.png')
 
   .head--bg-g-on
-    background-image: url('../images/title-background/girlyanda-on.png')
+    &.lights_2
+      background-image: url('../images/title-background/lights_2.png')
+      +above($bp)
+        animation: opacity-garland 1.0s linear 0.0s infinite alternate
+    &.lights_3
+      background-image: url('../images/title-background/lights_3.png')
+      +above($bp)
+        animation: opacity-garland 1.0s linear 0.5s infinite alternate
+    &.lights_4
+      background-image: url('../images/title-background/lights_4.png')
+      +above($bp)
+        animation: opacity-garland 1.0s linear 1.0s infinite alternate
+
     +above($bp)
-      animation: opacity .5s ease-out $delayCommon infinite alternate
+      -webkit-perspective: 1000
+      backface-visibility: hidden
+      -webkit-transform:translate3d(0,0,0)
+      transform:translate3d(0,0,0)
+      -webkit-transform-style: preserve-3d
+      // animation: opacity 0.6s ease-out $delayCommon infinite alternate
 
   .head--bg-alert
-    background-image: url('../images/title-background/trevoga.png')
+    background-image: url('../images/title-background/lights_1.png')
     +above($bp)
-      animation: opacity .5s ease-out $delayCommon infinite alternate
+      -webkit-perspective: 1000
+      backface-visibility: hidden
+      -webkit-transform:translate3d(0,0,0)
+      transform:translate3d(0,0,0)
+      -webkit-transform-style: preserve-3d
+      animation: opacity-alarm 0.3s linear 1.0s infinite alternate
+
 
   .head--bg-dark
     background-color: rgba(0,0,0, .5)
     +above($bp)
-      animation: opacity .5s ease-out $delayReverse infinite alternate
+      -webkit-perspective: 1000
+      backface-visibility: hidden
+      -webkit-transform:translate3d(0,0,0)
+      transform:translate3d(0,0,0)
+      -webkit-transform-style: preserve-3d
+      // animation: opacity 1.5s ease-out $delayReverse infinite alternate
 
-@-webkit-keyframes opacity
-  0%   {opacity:1;}
-  100% {opacity:0;}
+@-webkit-keyframes opacity-alarm
+  0%   {opacity:1}
+  100% {opacity:0}
 
-@keyframes opacity
-  0%   {opacity:1;}
-  100% {opacity:0;}
+@keyframes opacity-alarm
+  0%   {opacity:1}
+  100% {opacity:0}
+
+@-webkit-keyframes opacity-garland
+  0%   {opacity:0}
+  100% {opacity:1}
+
+@keyframes opacity-garland
+  0%   {opacity:0}
+  100% {opacity:1}

@@ -34,6 +34,7 @@
     "gulp-zip": "^4.0.0",
     "jeet": "^7.1.0",
     "rupture": "^0.6.2",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "presskit": "*"
   }
 }

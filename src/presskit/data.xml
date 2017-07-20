@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Painted Black Games</title>
+  <based-in>Dnipro, Ukraine</based-in>
+  <founding-date>April 23, 2014</founding-date>
+  <website>http://paintedblack.games</website>
+  <press-contact>
+    egnech@gmail.com
+  </press-contact>
+
+  <!-- Google analytics ID: -->
+  <analytics></analytics>
+
+  <phone></phone>
+  <address>
+    <line>
+      <!-- Street -->
+    </line>
+    <line>
+      <!-- City -->
+    </line>
+    <line>
+      <!-- Country -->
+    </line>
+  </address>
+
+  <socials>
+    <social>
+      <name></name>
+      <link>
+        <!-- URL starting with http or https -->
+      </link>
+    </social>
+  </socials>
+
+  <description></description>
+
+  <!-- Choose between a single block: -->
+  <history></history>
+
+  <credits>
+    <credit>
+      <person>Alina Berdnik</person>
+      <role>Artist, Animator</role>
+    </credit>
+
+    <credit>
+      <person>Evgeni Puzankov</person>
+      <role>Narrative Designer, Writer</role>
+    </credit>
+
+    <credit>
+      <person>Roman Tomilin</person>
+      <role>Producer, Developer</role>
+    </credit>
+
+    <credit>
+      <person>Ruslan Viter</person>
+      <role>Composer, Sound Designer</role>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name>Roman Tomilin</name>
+      <mail>egnech@gmail.com</mail>
+    </contact>
+  </contacts>
+</company>

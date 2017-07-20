@@ -1,0 +1,19 @@
+<section class="section section-fixed">
+  <div class="section-wrapper">
+    <div class="fixed-title centered">
+      <a class="fixed-social presskit" target="_blank" href="/presskit/product/index.html">
+        <span class="social-text">press kit</span>
+      </a>
+    </div>
+    <div class="fixed-links">
+      <a href="http://eepurl.com/cN-KVj" class="btn btn-fixed">
+        <span class="btn-text">Subscribe <span class="m-hidden">for updates</span></span>
+      </a>
+    </div>
+    <div class="fixed-socials">
+      {% for item in share %}
+        {% include "partials/sections/fixed/template_socials.html" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

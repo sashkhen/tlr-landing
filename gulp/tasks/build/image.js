@@ -5,7 +5,7 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
 gulp.task('build:image', function () {
-  gulp.src(config.src)
+  return gulp.src(config.src)
       .pipe(imagemin())
       // .pipe(webp())
       .pipe(gulp.dest(config.dest))

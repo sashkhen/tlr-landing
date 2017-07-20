@@ -19,6 +19,10 @@ gulp.task('watch', function(){
     gulp.start('build:fonts');
   });
 
+  watch([config.favicons], function(event, cb) {
+    gulp.start('build:favicons');
+  });
+
   watch([config.javascript], function(event, cb) {
     gulp.start('build:javascript');
   });

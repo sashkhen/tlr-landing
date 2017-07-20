@@ -1,9 +1,15 @@
+{% set cta = {
+  link: 'http://gamejolt.com/games/the-long-reach-playable-teaser/110190',
+  action: 'Try the Demo',
+  logo: '/images/logos/game-jolt-logo.svg'
+} %}
+
 <section class="section section-cta">
   <div class="section-wrapper">
-    <a class="cta" target="_blank" href="http://gamejolt.com/games/the-long-reach-playable-teaser/110190">
-      <p class="action">Try the Demo</p>
+    <a class="cta" target="_blank" href={{cta.link}}>
+      <p class="action">{{cta.action}}</p>
       <p class="cursive">on</p>
-      <img class="img img-cta" src="https://s.gjcdn.net/assets/game-jolt-logo.07949d.svg" />
+      <img class="img img-cta" src={{cta.logo}} />
     </a>
   </div>
 </section>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game>
+  <title>The Long Reach</title>
+  <release-dates>
+    <release-date>Q3, 2017</release-date>
+  </release-dates>
+  <website>http://thelongreachgame.com</website>
+
+  <!-- Link to request press copy: -->
+  <press-copy-request></press-copy-request>
+
+  <platforms>
+    <platform>
+      <name>PC</name>
+      <link>http://steampowered.com</link>
+    </platform>
+
+    <platform>
+      <name>macOS</name>
+      <link>http://steampowered.com</link>
+    </platform>
+
+    <platform>
+      <name>Linux</name>
+      <link>http://steampowered.com</link>
+    </platform>
+
+    <platform>
+      <name>xBox</name>
+      <link>http://www.xbox.com</link>
+    </platform>
+
+    <platform>
+      <name>PlayStation 4</name>
+      <link>http://playstation.com</link>
+    </platform>
+
+    <platform>
+      <name>Nintendo Switch</name>
+      <link>http://www.nintendo.com/switch/</link>
+    </platform>
+  </platforms>
+
+  <prices>
+    <price>
+      <currency></currency>
+      <value></value>
+    </price>
+  </prices>
+
+  <description>
+    The Long Reach is an intricate puzzle adventure where you have to run for your life.
+    It’s a The Cave-ish style adventure in which your puzzles are walking, mumbling, and yelling. They went insane and are there to get you. You’ll have to work out their own personal horrors.
+    The story is weird shit delivered with a serious face. We keep our focus on one feature and that is escape. Gallows humour, personal nightmares, and plain old cowardice. Characters will either take their stand or die an ignominious death.
+  </description>
+
+  <!-- Choose between a single block: -->
+  <history>
+    Add some storytelling here. Not the scenario of your game, but rather some backgrounds behind the creation process: why are you making this game? Most projects starts with a cool story.
+  </history>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+  <features>
+    <feature>Magical realism. We’re going for a usual and mundane exposition parts that are trashed and twisted and as the story unfolds.</feature>
+    <feature>Psychological thriller. Most games on the market are more about the horror side while we use it to highlight the vicissitudes of psyche.</feature>
+    <feature>Puzzles rely on figuring out enemies nightmares. Every enemy is somewhat insane through no fault of his own.</feature>
+    <feature>Instead of pixel-hunting for objects to use you have to observe your obstacles.</feature>
+    <feature>Tight focus. The game is about escaping. Every story bit and puzzle motivation rotates around escaping. Whether from an imminent threat, your girlfriend, or yourself.</feature>
+    <feature>Your enemies aren’t faceless zombies or possessed puppets. They are humans whose lives and stories matter and we make sure the player knows that.</feature>
+  </features>
+
+  <trailers>
+    <trailer>
+      <name>The Long Reach Greenlight Trailer 1</name>
+      <youtube>
+        wvrNZoFCbes
+      </youtube>
+    </trailer>
+
+    <trailer>
+      <name>The Long Reach Greenlight Trailer 2</name>
+      <youtube>
+        x43Z9USY_TM
+      </youtube>
+    </trailer>
+  </trailers>
+
+  <awards>
+    <award>
+      <description>Excellence in Audio DevGamm 2016</description>
+      <info></info>
+    </award>
+
+    <award>
+      <description>Excellence in Narrative DevGamm 2016 (Nomenie)</description>
+      <info></info>
+    </award>
+  </awards>
+
+  <quotes>
+    <quote>
+      <description>Looks fucking amazing. First greenlight game that i am actually exited to buy. Good work mate.</description>
+      <name>[TNZ] FaZe Weed</name>
+      <website></website>
+      <link></link>
+    </quote>
+
+    <quote>
+      <description>The Long Reach, puzzle survival game enters steam greenlight</description>
+      <name>oneangrygamer</name>
+      <website>http://www.oneangrygamer.net</website>
+      <link>http://www.oneangrygamer.net/2016/10/the-long-reach-puzzle-survival-game-enters-steam-greenlight/14721/</link>
+    </quote>
+  </quotes>
+
+  <additionals>
+    <additional>
+      <title>Facebook</title>
+      <description></description>
+      <link>https://www.facebook.com/TheLongReach</link>
+    </additional>
+
+    <additional>
+      <title>Twitter</title>
+      <description></description>
+      <link>https://twitter.com/TheLongReach</link>
+    </additional>
+  </additionals>
+
+  <credits>
+    <credit>
+      <person>Alina Berdnik</person>
+      <role>Artist, Animator</role>
+    </credit>
+
+    <credit>
+      <person>Evgeni Puzankov</person>
+      <role>Narrative Designer, Writer</role>
+    </credit>
+
+    <credit>
+      <person>Roman Tomilin</person>
+      <role>Producer, Developer</role>
+    </credit>
+
+    <credit>
+      <person>Ruslan Viter</person>
+      <role>Composer, Sound Designer</role>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name>Roman Tomilin</name>
+      <mail>egnech@gmail.com</mail>
+    </contact>
+  </contacts>
+</game>

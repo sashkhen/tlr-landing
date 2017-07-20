@@ -8,9 +8,6 @@ $(document).ready(function() {
   // for desktops only
   if (!isMobileDevice) {
 
-    // title background interactions
-    anm.on();
-
     var SPEED    = 1,
         DURATION = 1000,
         DELAY    = 0.5,
@@ -80,17 +77,11 @@ $(document).ready(function() {
       if (prevIsSmall !== isSmallScreen) {
         if (isSmallScreen) {
           controller.enabled(false);
-          anm.off();
         } else {
           controller.enabled(true);
           controller.update(true);
-          anm.on();
         }
       }
-
     });
-  } else {
-    anm.off();
   }
-
 });

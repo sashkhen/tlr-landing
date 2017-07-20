@@ -20,7 +20,8 @@ $maxWidthText = 350px
       +below($bp)
         margin: 0 auto
 
-    &.awards-item-left
+    // &.awards-item-right
+    &:nth-child(odd)
       flex-direction: row
       +below($bp)
         flex-direction: column
@@ -38,7 +39,8 @@ $maxWidthText = 350px
         +below($bp)
           padding: $spaceVertical 0 0 0
 
-    &.awards-item-right
+    // &.awards-item-right
+    &:nth-child(even)
       flex-direction: row-reverse
       +below($bp)
         flex-direction: column
@@ -80,3 +82,32 @@ $maxWidthText = 350px
 
     .text-author
       margin-top: 24px
+
+// for quotes only [without images]
+.section-awards-without-images
+  &.section-awards .section-wrapper
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+
+  .awards-item
+    &:nth-child(odd)
+    &:nth-child(even)
+      flex: 0 0 50%
+      margin: 0 0 70px
+      +below($bp)
+        display: block
+        flex: 0 0 100%
+
+      .item-image
+        display: none
+
+      .item-text
+        flex: 0 0 100%
+        justify-content: flex-start
+
+        .text-wrapper
+          margin: 0 auto
+          +below($bp)
+            margin: 0

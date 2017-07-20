@@ -43,23 +43,15 @@ $padding = 32px
     padding-right: $padding
     +below($bp)
       flex: 0 0 50%
+      width: 50%
+      padding-right: ($padding / 2)
       padding-bottom: $padding
 
     .item-image
       position: relative
       width: 100%
-      overflow: hidden
-      margin: 0 0 16px
-
-      &::after
-        content: ''
-        display: block
-        padding-bottom: 100%
 
       .img.img-team
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
         width: 100%
 
     .text-name

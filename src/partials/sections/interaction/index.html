@@ -1,6 +1,38 @@
+{% set interaction = {
+  image: '/images/interaction/city_normal.png',
+  sponsors: [
+    {
+      logo: '/images/logos/painted_black_games_splash.png',
+      title: 'Painted_Black_Games',
+      href: 'http://paintedblack.games'
+    },
+    {
+      logo: '/images/logos/merge-games-logo.png',
+      title: 'Merge_Games',
+      href: 'http://mergegames.com'
+    }
+  ],
+  copyrights: 'TheLongReach™ developed by PaintedBlack™ Games in association with MergeGamesⒸ'
+} %}
+
 <section class="section section-interaction">
-  <div class="section-wrapper section-wrapper-wide">
+  <div class="image-wrapper">
     <div class="shadow"></div>
-    <img class="img img-interaction" src="images/info/image-2.jpg" />
+    <img src={{interaction.image}}>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="copyrights">
+      <div class="sponsors">
+        {% for item in interaction.sponsors %}
+          <div class="sponsors-item">
+            <a href={{item.href}}>
+              <img class="img img-sponsors" src={{item.logo}} alt={{item.title}} />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <p class="copy-text">{{interaction.copyrights}}</p>
+    </div>
   </div>
 </section>

@@ -1,0 +1,32 @@
+{% set promotion = [
+  {
+    name: 'Steam Community'
+    image: 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016',
+    link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=781956216'
+  },
+  {
+    name: 'GOG'
+    image: 'http://www.sokobond.com/images/gog.png',
+    link: 'https://www.gog.com/'
+  },
+] %}
+
+<section class="section section-fixed">
+  <div class="section-wrapper">
+    <div class="fixed-title">
+      <p class="title-text">Available now</p>
+      <p class="title-cursive">for Windows, Mac, Linux</p>
+    </div>
+    <div class="fixed-links">
+      <p class="links-title">Buy on:</p>
+      {% for item in share %}
+        {% include "partials/sections/fixed/template_promo.html" %}
+      {% endfor %}
+    </div>
+    <div class="fixed-socials">
+      {% for item in share %}
+        {% include "partials/sections/fixed/template_socials.html" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

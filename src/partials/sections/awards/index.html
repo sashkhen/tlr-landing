@@ -1,9 +1,33 @@
-<section class="section section-awards">
+{% set awards = [
+  {
+    image: '/images/awards/award.png',
+    quote: '«Looks fucking amazing. First greenlight game that i am actually exited to buy. Good work mate.»',
+    author: '— [TNZ] FaZe Weed'
+  },
+  {
+    image: '/images/awards/award.png',
+    quote: '«Looks fucking amazing. First greenlight game that i am actually exited to buy. Good work mate.»',
+    author: '— [TNZ] FaZe Weed'
+  },
+  {
+    image: '/images/awards/award.png',
+    quote: '«Looks fucking amazing. First greenlight game that i am actually exited to buy. Good work mate.»',
+    author: '— [TNZ] FaZe Weed'
+  },
+  {
+    image: '/images/awards/award.png',
+    quote: '«Looks fucking amazing. First greenlight game that i am actually exited to buy. Good work mate.»',
+    author: '— [TNZ] FaZe Weed'
+  }
+] %}
+
+<!-- just remove .section-awards-without-images when you find images -->
+<section class="section section-awards section-awards-without-images">
   <div class="section-wrapper">
     {% block content %}
-      {% include "partials/sections/awards/first.html" %}
-      {% include "partials/sections/awards/second.html" %}
-      {% include "partials/sections/awards/third.html" %}
+      {% for item in awards %}
+        {% include "partials/sections/awards/template.html" %}
+      {% endfor %}
     {% endblock %}
   </div>
 </section>
